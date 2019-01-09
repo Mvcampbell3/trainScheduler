@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="getData()">
+<!-- <body> -->
+
+
+    <header>
+        <h1 class="mainTitle">Train Scheduler</h1>
+    </header>
+
+    <div class="container">
+        <div class="row inputSection">
+            <div class="col-12 inputForm">
+                <form id="myForm" action="submit">
+                    <div class="row">
+                        <label class="col-6" for="trainName">Train Name</label>
+                        <input type="text" name="trainName" id="trainName" class="col-6">
+                        <label for="destination" class="col-6">Destination</label>
+                        <input type="text" name="destination" id="destination" class="col-6">
+                        <label for="initDepart" class="col-6">Initial Departure (Military Time)</label>
+                        <input type="text" name="initDepart" id="initDepart" class="col-6" placeholder="XX:XX">
+                        <label for="freq" class="col-6">Frequency(min)</label>
+                        <input type="text" name="freq" id="freq" class="col-6">
+                        <input class="col-2 btn btn-primary subBtn" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row outputSection text-center">
+            <h6 class="col-3 tableTitle">Train Name</h6>
+            <h6 class="col-2 tableTitle">Destination</h6>
+            <h6 class="col-3 tableTitle">Frequency(min)</h6>
+            <h6 class="col-2 tableTitle">Next Arrival</h6>
+            <h6 class="col-2 tableTitle">Minutes Away</h6>
+        </div>
+        <div class="row">
+            <div class="col-12 appendHere"></div>
+        </div>
+
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
